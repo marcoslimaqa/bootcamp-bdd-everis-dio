@@ -33,7 +33,7 @@ public class CarrinhoSteps {
 	public void confirmarEndereco(){
 		CarrinhoPage carrinhoPage = new CarrinhoPage();
 		carrinhoPage.confirmarEndereco();
-		carrinhoPage.aceitarTermosServiço();
+		carrinhoPage.aceitarTermosServico();
 		carrinhoPage.confirmarEntrega();
 	}
 

@@ -73,7 +73,7 @@ public class CarrinhoPage extends BasePage {
 		logInfo("O botão de confirmação de endereço foi pressionado.");
 	}
 
-	public void aceitarTermosServiço(){
+	public void aceitarTermosServico(){
 		waitElement(By.xpath(".//label[@for='cgv']"), 5);
 		checkTermosServico.click();
 		logInfo("Termos de serviço aceito.");
@@ -81,7 +81,7 @@ public class CarrinhoPage extends BasePage {
 
 	public void confirmarEntrega() {
 		botaoProcessCarrier.click();
-		logInfo("O botão de confirmação de entregafoi pressionado.");
+		logInfo("O botão de confirmação de entrega foi pressionado.");
 	}
 
 	public void escolherMetodoPagamento(){
