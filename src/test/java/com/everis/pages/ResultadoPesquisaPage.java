@@ -12,7 +12,7 @@ public class ResultadoPesquisaPage extends BasePage {
 	@FindBy(xpath = "//*[text()='Add to cart']")
 	protected WebElement botaoAdicionarAoCarrinho;
 	
-	@FindBy(css = "[title='Proceed to checkout']")
+	@FindBy(css = "a[title='Proceed to checkout']")
 	protected WebElement botaoProsseguir;
 	
 	public ResultadoPesquisaPage() {
@@ -20,11 +20,13 @@ public class ResultadoPesquisaPage extends BasePage {
 	}
 
 	public void adicionarProdutoAoCarrinho(String nomeProduto) {
+		waitElement(By.cssSelector("#center_column > ul.product_list"), 5);
 		WebElement nomeProdutoTela = driver.findElement(By.xpath(".//*[@itemprop='name']/*[contains(text(), '" + nomeProduto + "')] | .//*[@itemprop='name'][text()='" + nomeProduto + "']"));
 		moveToElement(nomeProdutoTela);
 		botaoAdicionarAoCarrinho.click();
 		waitElement(botaoProsseguir, 10).click();
 		log("Adicionou o produto [" + nomeProduto + "] ao carrinho");
 	}
+
 
 }
